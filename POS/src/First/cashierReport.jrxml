@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="a7166a77-ef88-4c83-bd0f-ae351d9705e9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    *
+FROM
+     user01]]>
+	</queryString>
+	<field name="uid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="uname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="upassword" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ucpassword" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="upno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="822" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="152" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="555" height="115" uuid="d2c97815-acc7-477c-b4d9-5eb92c52518f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="true" isItalic="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[CASHIER REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="231" y="115" width="321" height="37" forecolor="#FF3333" uuid="5259ce44-fefc-425a-ae5f-cd7474e60592"/>
+				<textElement textAlignment="Right">
+					<font fontName="DialogInput" size="26" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[POS SYSTEM]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="97" y="5" width="458" height="20" backcolor="#666666" uuid="32979db7-c58a-4d87-a030-b7745dec9616"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="65" height="15" uuid="329dd315-bada-4907-848a-2b4c67cbf8a5"/>
+					<text><![CDATA[uid]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="65" y="0" width="65" height="15" uuid="6e5026bb-4899-4f08-90c8-c8847370b744"/>
+					<text><![CDATA[uname]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="130" y="0" width="65" height="15" uuid="266a1b8b-a188-45aa-98ce-ed6c770a123b"/>
+					<text><![CDATA[upassword]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="195" y="0" width="65" height="15" uuid="2fbf2f23-3916-48d8-acac-e6270c2eeae3"/>
+					<text><![CDATA[ucpassword]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="260" y="0" width="65" height="15" uuid="3d931d7d-baf0-45c1-a161-33b6493bf956"/>
+					<text><![CDATA[email]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="325" y="0" width="65" height="15" uuid="30d64100-0967-4936-be51-537fa6cdb205"/>
+					<text><![CDATA[gender]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="390" y="0" width="65" height="15" uuid="e1d09882-4275-4401-8441-7a0adfd5cce1"/>
+					<text><![CDATA[upno]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="97" y="1" width="458" height="15" uuid="acc8333b-7cad-490a-aafd-eea1f4672b86"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="65" height="15" uuid="549fd118-4563-4058-a551-6f401f16c54c"/>
+					<textFieldExpression><![CDATA[$F{uid}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="65" y="0" width="65" height="15" uuid="b67d968a-86cf-4b9b-9faa-9851504fc130"/>
+					<textFieldExpression><![CDATA[$F{uname}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="130" y="0" width="65" height="15" uuid="e5026c1a-c276-48dd-b3d7-9e86b4147419"/>
+					<textFieldExpression><![CDATA[$F{upassword}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="195" y="0" width="65" height="15" uuid="35505254-9a3b-4d3d-8205-517390a0f73a"/>
+					<textFieldExpression><![CDATA[$F{ucpassword}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="260" y="0" width="65" height="15" uuid="c6053a4c-39c6-4266-883f-08932564c6ad"/>
+					<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="325" y="0" width="65" height="15" uuid="1425b5ca-b359-422d-be0f-7879d566aec4"/>
+					<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="390" y="0" width="65" height="15" uuid="51b71fa4-51ce-4a01-bd3e-9d5da5592a09"/>
+					<textFieldExpression><![CDATA[$F{upno}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="458" height="1" uuid="b94c6905-ce38-406c-8774-4b1570b7ae2d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="100" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="424" y="0" width="131" height="20" forecolor="#000000" uuid="0e4886f3-d5dd-44f0-b854-d1436df0e64c"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="96" y="0" width="267" height="20" forecolor="#000000" uuid="3f2c086d-40e4-4f2a-88d4-ca201dccb228"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Silhouette Title Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
